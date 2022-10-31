@@ -88,7 +88,7 @@ const ZTypeHandler = () => {
      * @param {number} shot_per_sec
      * @returns
      */
-    autoShower: function (shot_per_sec) {
+    autoShower: function (shot_per_sec = 0) {
       const id = setInterval(this.autoShot, shot_per_sec);
       return {
         clear: () => clearInterval(id),
